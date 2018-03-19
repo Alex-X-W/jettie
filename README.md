@@ -4,4 +4,8 @@
 
 - the main package development process primarily follows from [python-packaging.readthedocs.io](https://python-packaging.readthedocs.io/en/latest/index.html)
 
-- indentation: 2 spaces, others following PEP8
+- code style: indentation 2 spaces, others following PEP8
+
+###### schedule
+
+- March 25th, 1) determine components to deliver; 2) finish tipster
