@@ -1,0 +1,16 @@
+Our project is basically two folds, with one fold more of nlp flavor and the other more system/engineering oriented.
+
+
+1. syntactic parser with two methods
+
+i) shift-reduce
+ii) linearize syntactic tree and do it like a machine translation using seq2seq model
+
+
+2. build a minimal lightweight JET like system in Python
+
+motivation:
+a) Tipster architecture good for 1)pipelining; 2)systematic experiment on IE tasks and 3) alignment of annotations which might facilitates future visualization work
+b) can be used later in our own work, and in Python which we are more familiar with
+
+we will only do a minimal version in the sense that it implements the Tipster, and can be used to do the preceding syntactic parser task

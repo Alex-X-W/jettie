@@ -9,3 +9,10 @@
 ###### schedule
 
 - March 25th, 1) determine components to deliver; 2) finish tipster
+
+
+###### changes/potential changes from JET
+
+- Featureset got detached from annotation
+
+  ​

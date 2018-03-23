@@ -24,4 +24,4 @@ class Span(object):
     return not self.__eq__(other)
 
   def __repr__(self):
-    return '(%d, %d)' % (self.start, self.end)
+    return '(%d,%d)' % (self.start, self.end)
