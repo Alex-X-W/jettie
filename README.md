@@ -8,11 +8,6 @@
 
 ###### schedule
 
-- March 25th, 1) determine components to deliver; 2) finish tipster
+- [x] March 25th, 1) determine components to deliver; 2) Tipster almost done
+- [ ] April 1st, 1) choose dataset; 2) read the paper; 3) finish Tipster; 4) get started coding
 
-
-###### changes/potential changes from JET
-
-- Featureset got detached from annotation
-
-  ​
