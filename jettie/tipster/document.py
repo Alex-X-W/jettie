@@ -1,5 +1,6 @@
 from .annotation import Annotation
 
+
 class Document(object):
   def __init__(self, stg=None, doc=None):
     if doc:
@@ -59,7 +60,7 @@ class Document(object):
       self.annotationsByEnd[end] = list()
     self.annotationsByEnd[end].append(ann)
     type = ann.type
-    if type not in self.annotationsByType.keys()
+    if type not in self.annotationsByType.keys():
       self.annotationsByType[type] = list()
     self.annotationsByType[type].append(ann)
 
@@ -67,7 +68,7 @@ class Document(object):
     return ann
 
   def annotate(self, start, end, att):
-    # TODO add start end att tro annotation
+    # TODO add start end att to annotation
     ann = Annotation()
     return self.add_annotation(ann)
 
@@ -141,7 +142,7 @@ class Document(object):
       return None
     ann_list = list()
     for ann in self.annotationsByType[t]:
-      # TODO wihin function for span
+      # TODO: within function to be implemented for `span` class
       if ann.span.within(span):
         ann_list.append(ann)
     return ann_list
