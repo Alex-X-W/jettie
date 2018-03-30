@@ -8,6 +8,8 @@
 
 ###### schedule
 
-- [x] March 25th, 1) determine components to deliver; 2) Tipster almost done
-- [ ] April 1st, 1) choose dataset; 2) read the paper; 3) finish Tipster; 4) get started coding
+- [x] March 25th, ~~1) determine components to deliver; 2) Tipster almost done~~
+- [x] April 1st, ~~1) choose dataset; 2) read the paper;~~ 3) finish Tipster; ~~ 4) get started coding ~~ 
+- [ ] April 15th, both models done
+
 
