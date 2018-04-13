@@ -1,12 +1,13 @@
 from .annotation import Annotation
+from .span import Span
 
 
 class Document(object):
-  def __init__(self, stg=None, doc=None):
+  def __init__(self, txt=None, doc=None):
     if doc:
       self.init_with_doc(doc)
-    elif stg:
-      self.text = stg
+    elif txt:
+      self.text = txt
       self.annotationsByStart = dict()
       self.annotationsByEnd = dict()
       self.annotationsByType = dict()
@@ -67,9 +68,9 @@ class Document(object):
     # TODO set document to span
     return ann
 
-  def annotate(self, start, end, att):
+  def annotate(self, start, end, tp):
     # TODO add start end att to annotation
-    ann = Annotation()
+    ann = Annotation(tp, Span(start, end))
     return self.add_annotation(ann)
 
   def remove_annotation(self, ann):
@@ -83,7 +84,7 @@ class Document(object):
 
     type = ann.type
     if type in self.annotationsByType.keys():
-      self.annotationsByType.remove(ann)
+      self.annotationsByType.pop(ann, None)
     return
 
   def remove_annotations_by_type(self, t):

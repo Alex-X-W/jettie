@@ -1,6 +1,3 @@
+from .document import Document
 from .span import Span
-
-
-__all__  = [
-  'Span'
-]
+from .annotation import Annotation
