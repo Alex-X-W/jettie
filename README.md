@@ -9,8 +9,8 @@
 ##### schedule
 
 - [x] March 25th, ~~1) determine components to deliver; 2) Tipster almost done~~
-- [x] April 1st, ~~1) choose dataset; 2) read the paper;~~ 3) finish Tipster; ~~4) get started coding~~ 
-- [ ] April 15th, both models done
+- [x] April 1st, ~~1) choose dataset; 2) read the paper; 3) finish Tipster; 4) get started coding~~ 
+- [ ] April 15th, model done
 
 
 ##### plan
@@ -19,5 +19,5 @@
 
 1. make sure how seq2seq is going on
 2. vanilla version model with only word embeddings
-3. enhanced version model, which takes input both word and POS embeddings
+3. ~~enhanced version model, which takes input both word and POS embeddings~~
 
