@@ -40,7 +40,7 @@ class Document(object):
   def normalized_text_by_ann(self, ann):
     return self.normalized_text_by_span(ann.span)
 
-  def get_lentgh(self):
+  def get_length(self):
     return len(self.text)
 
   def get_char_at(self, p):

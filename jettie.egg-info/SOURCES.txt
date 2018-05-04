@@ -4,4 +4,5 @@ jettie.egg-info/PKG-INFO
 jettie.egg-info/SOURCES.txt
 jettie.egg-info/dependency_links.txt
 jettie.egg-info/not-zip-safe
+jettie.egg-info/requires.txt
 jettie.egg-info/top_level.txt

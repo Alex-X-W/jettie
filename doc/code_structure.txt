@@ -1,0 +1,22 @@
+________________________________________________
+______  /__  ____/__  __/__  __/___  _/__  ____/
+___ _  /__  __/  __  /  __  /   __  / __  __/   
+/ /_/ / _  /___  _  /   _  /   __/ /  _  /___   
+\____/  /_____/  /_/    /_/    /___/  /_____/   
+                                                
+.
+├── demo
+│   └── tokenizer.py           # demo using tokenizer.BaseTokenizer base class
+├── tests                      # where unittests are
+│   ├── __init__.py
+│   └── test_tipster.py        # simple test of tipster, similar job done in demo/tokenizer.py
+├── tipster                    # Tipster architecture
+│   ├── __init__.py
+│   ├── annotation.py          # Tipster's Annotation class
+│   ├── document.py            # Tipster's Document class, the core
+│   └── span.py                # Tipster's Span class
+└── tokenizer                  # tokenizer 'interface', as python dont have interface, implement in a base class way
+    ├── __init__.py
+    └── base_tokenizer.py      # tokenizer base class
+
+

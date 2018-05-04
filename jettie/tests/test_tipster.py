@@ -2,11 +2,6 @@
 running a naive test using Tipster:
 1) read from a sample text and store into an instance of `Document` class
 2) tokenize and add annotation `token`
-3) add constituency parse tags
-    parse tags representation:
-    sentence:     ['Go', '.']
-    parse tags:   ['(S(VP*)_vp', '*)_s']
-    right parentheses are subscripted by their head POS tags, and '*' denotes the current terminal word
 """
 
 import unittest
@@ -35,11 +30,11 @@ class TestTipster(unittest.TestCase):
       doc.annotate(sent_span[0], sent_span[1], 'sentence')
 
     # add token annotations
-    tweettokenizer = TreebankWordTokenizer()
+    treebanktokenizer = TreebankWordTokenizer()
     # use sentence annotation to retrieve sentences
     for sent in doc.get_annotations_by_type('sentence'):
-      toks = tweettokenizer.tokenize(doc.get_text_by_ann(sent))
-      spans = tweettokenizer.span_tokenize(doc.get_text_by_ann(sent))
+      toks = treebanktokenizer.tokenize(doc.get_text_by_ann(sent))
+      spans = treebanktokenizer.span_tokenize(doc.get_text_by_ann(sent))
       sent_base = sent.span.start
       for tok, tok_span in zip(toks, spans):
         span = Span(tok_span[0] + sent_base, tok_span[1] + sent_base)

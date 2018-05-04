@@ -11,5 +11,6 @@ setup(
   packages=['jettie'],
   zip_safe=False,
   test_suite='nose.collector',
+  install_requires=['nose'],
   tests_require=['nose'],
 )

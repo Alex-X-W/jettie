@@ -8,5 +8,3 @@ class Annotation(object):
 
   def __repr__(self):
     return '%s@%s' % (self.type, self.span)
-
-  # TODO: implement method which returns if an annotation is non-key, e.g. `<other>`
