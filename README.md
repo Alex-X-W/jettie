@@ -1,17 +1,59 @@
-##### under construction
+# Jettie
 
-- directory scaffolding setup primarily follows from [Dustin Tran's blog](http://dustintran.com/blog/a-research-to-engineering-workflow)
-
-- the main package development process primarily follows from [python-packaging.readthedocs.io](https://python-packaging.readthedocs.io/en/latest/index.html)
-
-- code style: indentation 2 spaces, others following PEP8
-
-##### schedule
-
-- [x] March 25th, ~~1) determine components to deliver; 2) Tipster almost done~~
-- [x] April 1st, ~~1) choose dataset; 2) read the paper; 3) finish Tipster; 4) get started coding~~ 
-- [x] April 15th, ~~model done~~
-- [ ] April 22nd, Xuan: write evaluation; Jiayun: train; hopefully wrap up
+*a light weight python information extraction framework, a descendant of NYU's JET IE system*
 
 
-##### plan
+
+### Motivation
+
+Tipster architecture good for
+
+- pipelining
+- systematic experiment on IE tasks
+- alignment of annotations which might facilitates future visualization work.
+
+In this project, we consider a minimal architecture of Tipster.
+
+
+
+### Code Structure
+
+![](./doc/code_structure.jpg)
+
+
+
+### Basic Design
+
+#### Primary architecture: Tipster
+
+Tipster is implemented in the subpackage of `jettie`, which is the core of ensuring annotations are well aligned. While python is dynamically typed language, much effort can be saved from writing getter and setter methods.
+
+#### NLP component interface
+
+In order for NLP task components to comply with Tipster, a natural way to do is require the customized components to provide methods which annotate and align text in a Tipster way. While in Java, such requirements can be implemented through interface, but in python, we do it in a base class and ask the customized component to inherent from the base class, and implement the methods defined in the base class. To see an example, see the `BaseTokenizer` class defined in `./tokenizer/base_tokenizer.py`, and its inherent subclass `SimpleTokenizer` defined in `./demo/tokenizer.py`.
+
+
+
+### Tests
+
+We performed unittest with automatic unit test tool `nose`, for an unittest case example please see `/tests/test_tipster.py`. Since we would still develop and use the project code in our own future work, writting automatic tests can make our life a little easier and neater.
+
+One can run all the unittests at the `./jettie/` directorie by issueing `$ nosetests .`, and ideal output indicating test cases passed should look like `./doc/unittest.png`.
+
+
+
+### Distribution and install
+
+We have distributed `jettie` with `pip`, to install it, run:
+
+```$ pip install jettie```
+
+to verify it installed successfully, open a python shell, do the following:
+
+```
+>>> import jettie
+>>> jettie.woof()
+I am a Shiba, and I woof! Woof!
+>>>
+```
+

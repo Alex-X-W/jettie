@@ -18,7 +18,7 @@ In this project, we consider a minimal architecture of Tipster.
 
 ### Code Structure
 
-![](/Users/xuanwang/Documents/18Spring/nlp/jettie/doc/code_structure.jpg)
+![](./code_structure.jpg)
 
 
 
@@ -39,4 +39,21 @@ In order for NLP task components to comply with Tipster, a natural way to do is 
 We performed unittest with automatic unit test tool `nose`, for an unittest case example please see `/tests/test_tipster.py`. Since we would still develop and use the project code in our own future work, writting automatic tests can make our life a little easier and neater.
 
 One can run all the unittests at the `./jettie/` directorie by issueing `$ nosetests .`, and ideal output indicating test cases passed should look like `./doc/unittest.png`.
+
+
+
+### Distribution and install
+
+We have distributed `jettie` with `pip`, to install it, run:
+
+```$ pip install jettie```
+
+to verify it installed successfully, open a python shell, do the following:
+
+```
+>>> import jettie
+>>> jettie.woof()
+I am a Shiba, and I woof! Woof!
+>>>
+```
 
